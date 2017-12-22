@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="sticky-top">
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark sticky-top" >
+  <ul class="navbar-nav">
+    <li class="nav-item">
+   <a class="nav-link active" href="/"> Home </a>
+ </li>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+   <ul class="navbar-nav">
+
+   
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/login">Login</a></li>
+      <li class="nav-item">
+      <a class="nav-link" href="/register">Register</a></li>
+  </ul>
+</div>
+</nav>
+</div><center>
+{% for i in postli %}
+<div class="card" style="width:50%; height:auto; padding:10px; background-color:#81BEF7">
+      <img class="card-img-top" src="{{i['imagepath']}}{{i['imagename']}}" alt="Card image" style="width:80%; height:auto;" >
+      
+      <div class="card-body">
+    <p class="card-text" style="color:white;">{{i['name']}}</h3>
+    <p class="card-text"> {{i['text']}}<br>
+    
+    </p></p></div></div>
+    {% endfor %}</center>
+</body>
+
+</html>
